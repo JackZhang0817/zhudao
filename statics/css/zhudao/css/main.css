@@ -1,0 +1,690 @@
+@charset "utf-8";
+/*normalize*/
+*{margin: 0;padding: 0;}
+body,html{
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url('../images/bg.jpg') #bccccc;
+}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;cursor: pointer;color: #fff}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:block;}
+#logo{
+	position: absolute;
+	left: 44px;
+	top: 0;
+	-moz-box-shadow:0px 1px 7px #5E5E5E; 
+	-webkit-box-shadow:0px 1px 7px #5E5E5E; 
+	box-shadow:0px 1px 7px #5E5E5E;
+	z-index: 99;
+}
+#logo img{
+	display: block;
+}
+#navBar{
+	position: absolute;
+	right: 40px;
+	top: 22px;
+    z-index:99;
+    -moz-box-shadow:-6px 6px 15px rgba(0,0,0,0.3);
+    -webkit-box-shadow:-6px 6px 15px rgba(0,0,0,0.3);
+    box-shadow:-6px 6px 15px rgba(0,0,0,0.3);
+}
+#navBar li{
+	float: left;
+	width: 46px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+    transition: all .2s;
+}
+
+#navBar li.on{
+	width: 100px;
+}
+#mainwrap{
+	position: relative;
+	width: 300px;
+	left: 300px;
+	top: 70px;
+    z-index:33;
+}
+.slogan p{
+	color: #fff;
+	line-height: 22px;
+}
+
+#mainwrap li{
+	display: block;
+	position: relative;
+	width: 136px;
+	height: 136px;
+	border: 1px solid #fff;
+	margin: 0 11px 11px 0;
+	float: left;
+	background:url('../images/gif.png') 16px 10px no-repeat #bccccc;
+	line-height: 136px;
+	font-size: 14px;
+	text-indent: 14px;
+	color: #fff;
+	-moz-box-shadow:-3px 2px 20px #878787; 
+	-webkit-box-shadow:-3px 2px 20px #878787; 
+	box-shadow:-3px 2px 20px #878787;
+	cursor: pointer;
+}
+#mainwrap .mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all .3s;
+	transform: scale(0);
+}
+#mainwrap li:hover,#mainwrap li.on{
+    border:1px solid #89aabb;
+}
+#mainwrap li:hover .mask,#mainwrap li.on .mask{
+	transform: scale(1);
+}
+#mainwrap li .title{
+	position: absolute;
+	z-index: 88;
+}
+#pics{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 58px;
+    right:0;
+}
+.pics{
+    height:100%;
+}
+.pics li{
+    height:100%;
+    position: relative;
+}
+#pics .pics img{
+    height:100%;
+    cursor: pointer;
+}
+.pics .text{
+    position: absolute;
+    bottom:44px;
+    line-height:60px;
+    font-size:24px;
+    text-indent:38px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #555;
+}
+.pics .more{
+    display: none;
+    height:76px;
+    font-size:13px;
+    color: #4b4b4a;
+    line-height:38px;
+    background: rgba(244,244,244,0.8);
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    text-indent:36px;
+}
+.dots{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:44px;
+    line-height:44px;
+    padding:0 34px;
+    background: rgba(244,244,244,0.8);
+    z-index:9;
+    vertical-align: middle;
+}
+.dots li{
+    width:11px;
+    height:11px;
+    display: inline-block;
+    margin:0 16px 0 0;
+    background: url("../images/dot.png") 1px 1px no-repeat;
+    cursor: pointer;
+}
+.dots li.open{
+    background: url("../images/dot_add.png") no-repeat;
+}
+.dots li.close{
+    background: url("../images/dot_sub.png") 0 4px no-repeat;
+}
+.rslides_tabs{
+    position: absolute;
+    bottom:0;
+    z-index:55;
+    margin-left:66px;
+}
+.rslides_tabs li{
+    display: inline-block;
+    width:11px;
+    margin-right:16px;
+    height:44px;
+    line-height:44px;
+}
+.rslides_tabs a{
+    color: rgba(0,0,0,0);
+    display: inline-block;
+    width:11px;
+}
+.rslides_here a{
+    background: url("../images/dot_on.png") 0 18px no-repeat;
+}
+
+#details{
+	height: 0;
+	position: fixed;
+	bottom: 58px;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: url('../images/bg_white.jpg');
+    overflow: hidden;
+}
+
+/* 关于 */
+.fourblock{
+	position: absolute;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+    display: none;
+}
+.hd_part{
+	margin-top: 70px;
+	position: absolute;
+}
+.hd_part h6{
+	width: 76px;
+	transition: all .3s;
+	line-height: 24px;
+	color: #fff;
+	cursor: pointer;
+	text-indent: 28px;
+	font-size: 14px;
+    font-weight: normal;
+}
+
+.hd_part h6:hover,.hd_part li.on h6{
+	width: 98px;
+}
+#details .block{
+    width:350px;
+    height:290px;
+    float: left;
+    margin-right:30px;
+}
+#details .longList{
+    float: left;
+}
+.longList li{
+    float: left;
+    margin-right:30px;
+    margin-top:24px;
+}
+.longList img{
+    display: block;
+    margin-bottom:48px;
+}
+.fourblock .bd_part{
+	float: left;
+	margin-left: 194px;
+	margin-top: 56px;
+    overflow: hidden;
+    font-size:13px;
+}
+.fourblock .bd_part>li{
+    height:272px;
+    position: relative;
+    top:0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.fourblock .bd_part .aside{
+	margin-right: 28px;
+    position: absolute;
+}
+.fourblock .bd_part .text{
+	float: left;
+    margin-left:250px;
+    position: relative;
+}
+.fourblock .bd_part .text h4{
+    width:300px;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #395c78;
+    padding:0 12px;
+    background: url("../images/h4.png") no-repeat;
+    margin-bottom:10px;
+}
+.text .service li{
+    text-indent:16px;
+    background: url("../images/h4.png") no-repeat;
+}
+.text .award li{
+    text-indent:16px;
+    background: url("../images/gif_gray.png") 0 2px no-repeat;
+    color: #476780;
+}
+.text button{
+    width:50px;
+    height:49px;
+    border: none;
+    outline:none;
+    background: url("../images/button.jpg") no-repeat;
+    position: absolute;
+    right:0;
+    top:36px;
+    cursor: pointer;
+}
+.text .prevButton{
+    background: url("../images/button.jpg") 0 -49px no-repeat;
+    top:86px;
+}
+.wrap{
+    position: relative;
+    overflow: hidden;
+    height:290px;
+    width:100%;
+}
+.wrap .inside{
+    position: absolute;
+    width:9999px;
+}
+.inside .inner{
+    float: left;
+    position: relative;
+}
+
+
+/* 案例 */
+.instance{
+    display: none;
+    position: absolute;
+    right:0;
+    top:0;
+    left:0;
+    bottom:0;
+}
+.instance .hd_part>li{
+    width:260px;
+    height:24px;
+    position: relative;
+}
+.instance .on .sub_title{
+    display: block;
+    z-index: 8
+}
+.instance .sub_title{
+    display: none;
+    width:120px;
+    position: absolute;
+    left:118px;
+    top:0;
+}
+.sub_title>li{
+    cursor: pointer;
+    line-height:24px;
+    transition: all .3s;
+    z-index: 3;
+}
+.sub_title .on,.sub_title li:hover{
+    color: #395c78;
+    text-indent:18px;
+    background: url("../images/gif_gray.png") 0 0 no-repeat;
+}
+
+.instance .bd_part{
+    float: left;
+    margin-left: 270px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.instance .bd_part>li{
+    height:298px;
+    position: relative;
+    overflow: hidden;
+}
+.instance .pic_list li{
+    float: left;
+    margin:0 2px 2px 0;
+    width:130px;
+}
+.instance .pic{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.instance .pic_list{
+    height:298px;
+    position: relative;
+}
+.instance .pic_list img{
+    display: block;
+    width:130px;
+    height:130px;
+    margin-bottom:2px;
+    transition: all .3s;
+}
+.instance .pic_list .pic:hover img{
+    transform: scale(1.1);
+}
+.instance .pic_list .pic:hover .text{
+    display: block;
+    opacity: 1;
+}
+.instance .pic_list .text{
+    opacity: 0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    line-height:30px;
+    padding:0 0 6px 12px;
+    background: #89aabb;
+    color: #fff;
+    transition: all .3s;
+}
+
+/*动态*/
+.update{
+    position: absolute;
+    right:0;
+    top:0;
+    left:0;
+    bottom:0;
+    display: none;
+}
+.update .hd_part>li{
+    margin-left:36px;
+    line-height:24px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.update .hd_part>.on,.update .hd_part>li:hover{
+    color: #395c78;
+    text-indent: 18px;
+    background: url(../images/gif_gray.png) 0 0 no-repeat;
+}
+.update .bd_part{
+    float: left;
+    margin-left: 270px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.update .bd_part li{
+    height:278px;
+    position: relative;
+}
+.update .bd_part li>div{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.update .bd_part img{
+    display: block;
+    transition: all .3s;
+}
+.update .bd_part li:hover img{
+    transform: scale(1.1);
+}
+.update .bd_part li:hover .text{
+    display: block;
+    opacity: 1;
+}
+.update .bd_part li .text{
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    line-height:30px;
+    padding:0 0 0 12px;
+    background: #89aabb;
+    color: #fff;
+    opacity:0;
+    transition: all .5s;
+}
+
+/* 招聘 */
+.recruit{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    font-size:13px;
+    line-height:22px;
+    display: none;
+}
+.recruit .wrap{
+    padding:38px 0 0 150px;
+}
+.recruit .inside>ul>li{
+    width:320px;
+    float: left;
+    margin-right:60px;
+}
+.recruit a {
+    display: inline-block;
+    text-indent:20px;
+    background: url("../images/gif_gray.png") 4px -2px no-repeat;
+    font-size:12px;
+    transition: all .3s;
+    color: #44647f;
+}
+.recruit li h6{
+    font-size:16px;
+    line-height:24px;
+    font-style: normal;
+    margin-top:-20px;
+}
+.recruit li ul li{
+    line-height:36px;
+    text-indent:10px;
+}
+
+/* 联系 */
+.contact{
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    padding:38px 0 0 66px;
+    display: none;
+}
+.contact .form{
+    width:260px;
+    float: left;
+    margin-right:26px;
+
+}
+.contact .form .dt{
+    line-height:22px;
+    font-size:12px;
+}
+.contact .form input{
+    width:220px;
+    padding:0 12px;
+    line-height:26px;
+    height:26px;
+    border: none;
+    outline:none;
+    background: #d9d9d9;
+}
+.contact .form textarea{
+    width:232px;
+    height:112px;
+    padding:0 6px;
+    border: none;
+    background: #d9d9d9;
+    resize: none;
+    outline:none;
+}
+.contact .form a{
+    display: inline-block;
+    text-indent:20px;
+    background: url("../images/gif_gray.png") 0 -4px no-repeat;
+    color: #000;
+    font-size:12px;
+    transition: all .3s;
+}
+.contact .form a:hover{
+    color: #44647f;
+}
+.contact .intro{
+    width:260px;
+    float: left;
+}
+.contact .intro a{
+    display: inline-block;
+    text-indent:20px;
+    background: url("../images/gif_gray.png") 0 -2px no-repeat;
+    font-size:12px;
+    color: #44647f;
+}
+.contact .intro h5{
+    font-size:16px;
+    font-weight: normal;
+    line-height:30px;
+}
+.contact .intro p{
+    line-height:20px;
+}
+
+/*底部栏*/
+#footer{
+	position: fixed;
+	height: 58px;
+	line-height: 58px;
+	background: #fff;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 9px; /*不支持小于12px字*/
+	padding: 0 32px;
+    z-index:99;
+}
+.italic{
+    font-style:italic;
+    padding-left:20px;
+}
+.copyright{
+    float: left;
+}
+.bottom_logo{
+    float: right;
+}
+.bottom_logo li{
+    display: block;
+    float: left;
+    margin-left:10px;
+    line-height:58px;
+    cursor: pointer;
+}
+.bottom_logo li:hover .share{
+    width:78px;
+}
+.bottom_logo li img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottom_logo .share{
+    float: right;
+    margin-left:10px;
+    width:0;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+/*弹出层*/
+.alert{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:6000px;
+    background: #fff;
+    z-index: 999;
+    overflow: hidden;
+}
+.alert .quit{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 101;
+    width:68px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    font-size:12px;
+    padding-right:46px;
+    background:url('../images/alertquit.jpg') right top no-repeat #514b4a;
+}
+.alert .lists{
+    position: relative;
+    overflow: hidden;
+}
+.lists ul{
+    width:9999px;
+    position: relative;
+}
+.lists ul li{
+    float: left;
+    width:690px;
+    height:520px;
+}
+.alert .nextPic{
+    width:50px;
+    height:49px;
+    position: absolute;
+    right:0;
+    top:50px;
+    background: url("../images/button.jpg") 0 0 no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.alert .prevPic{
+    width:50px;
+    height:49px;
+    position: absolute;
+    left:0;
+    top:50px;
+    background: url("../images/button.jpg") 0 -49px no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.alert .album{
+    text-align: center;
+    line-height:36px;
+}
+.alert .album .now{
+    font-size:24px;
+    padding:0 6px;
+}
+.alert .album .total{
+    font-size:14px;
+}
+.alert h5{
+    font-size:15px;
+    font-weight: normal;
+}

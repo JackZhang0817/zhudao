@@ -1,0 +1,34 @@
+#navBar li:nth-of-type(1){
+    background-color: #385b77;
+}
+#navBar li:nth-of-type(2){
+    background-color: #b3aca4;
+}
+#navBar li:nth-of-type(3){
+    background-color: #514b4a;
+}
+#navBar li:nth-of-type(4){
+    background-color: #97bec5;
+}
+#navBar li:nth-of-type(5){
+    background-color: #ffffff;
+    color: #97bec5
+}
+#navBar li:nth-of-type(6){
+    background-color: #97bec5;
+}
+#mainwrap .mask{
+    background-color: #89aabb;
+}
+.hd_part>li:nth-of-type(1) h6{
+    background-color: #89aabb;
+}
+.hd_part>li:nth-of-type(2) h6{
+    background-color: #b3aca4;
+}
+.hd_part>li:nth-of-type(3) h6{
+    background-color: #514b4a;
+}
+.hd_part>li:nth-of-type(4) h6{
+    background-color: #89aabb;
+}
